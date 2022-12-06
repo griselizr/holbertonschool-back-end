@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""Get todos from user."""
+"""returns information about his/her 
+TODO list progress
+"""
 import requests
 from sys import argv
 
 if __name__ == "__main__":
+    """ employee information """
+
     clients_id = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'
                               .format(argv[1]))
     all = clients_id.json()
